@@ -13,8 +13,15 @@ echo 'echo PATH=$PATH:~/komenti/bin' >> ~/.bashrc
 
 To characterise our cohort of interest, we first need to build up a vocabulary. The vocabulary defines concepts we're interested in, and the labels that indicate them in text. In our example, let's say we're interested in finding patients with atrial fibrillation.
 
-First, what we need to do is identify an ontology class that describes atrial fibrillation on [AberOWL](https://aber-owl.net). You can 
+First, what we need to do is identify an ontology class that describes atrial fibrillation on [AberOWL](https://aber-owl.net). Here is an example of searching AberOWL for atrial fibrillation: 
 
+![image](https://user-images.githubusercontent.com/223469/87681045-10ca8e80-c776-11ea-92b7-b145f7db8a06.png)
+
+We have terms grouped by their unique identifiers, and we need to select one which is common and ideally from a major ontology. For human phenotypes and diseases HP, DOID, and NCIT are good choices. So, in this case we can see that HP comes up first. We need to copy this IRI into a Komenti command, to query it *<http://purl.obolibrary.org/obo/HP_0005110>*:
+
+```bash
+komenti query "<http://purl.obolibrary.org/obo/HP_0005110>" --ontology HP --out labels.txt
+```
 
 
 ## Document Preparation
@@ -38,4 +45,6 @@ $ komenti diagnose -l labels.txt -a annotations.txt
 ```
 
 ## Manual Validation
+
+
 
