@@ -2,6 +2,8 @@
 
 In this guide, we will be concerned with the COVID-19 ontology, as it lives on http://www.aber-owl.net/ontology/COVID-19/
 
+## Querying for Concept Descriptions
+
 In the COVID-19 ontology, many different aspects of COVID-19 are discussed. Of these, *COVID Clinical Aspect (COVID:0000402)*. However, only one subclass of this is 
 actually asserted in the ontology. We can see this if we run the following Komenti command:
 
@@ -28,4 +30,20 @@ $ komenti query -q komenti query -q "isClinicalAspectFor some COVID-19 and 'ther
 
 The command collects different metadata associated with terms that are all clinical aspects of COVID-19, but are contained under different asserted substructures. Grouping them
 by their additional associated superclasses 'therapeutic procedure' we group all of these into one with the class description. Now, in *labels.txt* we have 6 labels for 5 different
-terms that describe therapeutic procedures for COVID-19.
+terms that describe therapeutic procedures for COVID-19. We can gain more labels for this by using Komenti's inter-ontology synonym expansion function:
+
+```bash
+$ komenti query -q komenti query -q "isClinicalAspectFor some COVID-19 and 'therapeutic procedure'" -o COVID-19 --expand-synonyms --lemmatise > labels.txt
+```
+
+This gives us some additional labels, including *kidney replacement therapy* for the *renal replacement therapy (NCIT:C126400)* class. These additional labels will allow us to recognise even more of these items in text!
+
+## Acquiring Content
+
+Now that we have some labels in our *labels.txt* that describe therapeutic procedures, we can start to query EBI's PMC dataset using Komenti. For ease, we will work with this small set of labels, and only on abstracts.
+
+
+```bash
+$ komenti query -q komenti query -q "isClinicalAspectFor some COVID-19 and 'therapeutic procedure'" -o COVID-19 --expand-synonyms --lemmatise > labels.txt
+```
+
