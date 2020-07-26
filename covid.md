@@ -38,12 +38,44 @@ $ komenti query -q komenti query -q "isClinicalAspectFor some COVID-19 and 'ther
 
 This gives us some additional labels, including *kidney replacement therapy* for the *renal replacement therapy (NCIT:C126400)* class. These additional labels will allow us to recognise even more of these items in text!
 
-## Acquiring Content
+## Acquiring Content for Review
 
 Now that we have some labels in our *labels.txt* that describe therapeutic procedures, we can start to query EBI's PMC dataset using Komenti. For ease, we will work with this small set of labels, and only on abstracts.
 
-
 ```bash
-$ komenti get_abstracts -l virology.txt --out abstracts/
+$ komenti get_abstracts -l labels.txt --out abstracts/
 ```
 
+This will download the abstracts of matching articles in PubMed into the *abstracts/* folder. This would give us an initial start to any manual literature review.
+
+## Annotation
+
+we can further use Komenti to associate the abstracts with the concepts we're interested in, by annotating them:
+
+```bash
+$ komenti annotate -l labels.txt -t abstracts/ --out ann.txt
+```
+
+This produces an *ann.txt* file, which is a list of every mention of each of our concepts of interest, with its surrounding sentence as context. For example:
+
+```
+ 203 PMC7291880.txt  http://purl.obolibrary.org/obo/NCIT_C94624  oxygen therapy  supplemental oxygen therapy isClinicalAspectFor some COVID-19 and 'therapeutic procedure'       8   most patients (23/29; 79.8     %) received supplemental oxygen therapy and antibiotics (23/29; 79.8%) in addition to traditional chinese medicines (26/29; 89.7%).
+```
+
+In this way, we are building assocaitions between our original complex class descriptions, and actual text. 
+
+## Sumamrisation
+
+With this command, you can produce a report, grouping articles by topics in the vocabulary:
+
+```bash
+$ komenti summarise -a ann.txt
+```
+
+## Entity occurrence
+
+We can further extend the functionality we have thus investigated to look at co-ocurrence between groups of concepts or complex class descriptions:
+
+```bash
+komenti summarise_entity_pairs -l labels.txt -a annotation.txt -c asbestos,toxicity
+```
