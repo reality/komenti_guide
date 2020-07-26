@@ -44,6 +44,6 @@ Now that we have some labels in our *labels.txt* that describe therapeutic proce
 
 
 ```bash
-$ komenti query -q komenti query -q "isClinicalAspectFor some COVID-19 and 'therapeutic procedure'" -o COVID-19 --expand-synonyms --lemmatise > labels.txt
+$ komenti get_abstracts -l virology.txt --out abstracts/
 ```
 
