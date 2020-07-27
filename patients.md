@@ -4,7 +4,7 @@ Komenti is a shiny and multi-faceted tool, bringing together the gnoses of biome
 
 ## Setting up Komenti
 
-Refer to the [installation guide](https://github.com/reality/komenti_guide/blob/master/installation.md)
+Refer to the [installation guide](https://github.com/reality/komenti_guide/blob/master/installation.md).
 
 ## Initialising Vocabulary
 
