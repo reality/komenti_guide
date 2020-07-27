@@ -73,15 +73,19 @@ First you want to annotate the letters with our vocabulary:
 $ komenti annotate -l labels.txt -t af_letters/ --out annotations.txt --group-directory-files
 ```
 
-This will recursively
+This will recursively annotate all of the files, collecting the annotations into a group based on the sub-directory. In this case, the identification number for the patient.
 
-Then, we will use the decision procedure to decide, per document, who has the disease
+Then, we will use the decision procedure to decide, per document, who has each disease:
 
 ```bash
 $ komenti diagnose -l labels.txt -a annotations.txt --by-group
 ```
 
+This will give you a TSV containing the judgements.
+
 ## Manual Validation
+
+TODO
 
 
 
