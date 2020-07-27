@@ -2,6 +2,10 @@
 
 In this guide, we will be concerned with the COVID-19 ontology, as it lives on http://www.aber-owl.net/ontology/COVID-19/
 
+## Setting up Komenti
+
+Refer to the [installation guide](https://github.com/reality/komenti_guide/blob/master/installation.md).
+
 ## Querying for Concept Descriptions
 
 In the COVID-19 ontology, many different aspects of COVID-19 are discussed. Of these, *COVID Clinical Aspect (COVID:0000402)*. However, only one subclass of this is 
