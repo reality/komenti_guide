@@ -83,9 +83,4 @@ $ komenti diagnose -l labels.txt -a annotations.txt --by-group
 
 This will give you a TSV containing the judgements.
 
-## Manual Validation
-
-TODO
-
-
 
