@@ -2,5 +2,5 @@ This file contains some guides/use cases for Komenti, and how it can be used in 
 
 * [Installation](installation.md)
 * [Axiom Suggestion](axiom_suggestion.md)
-* [Patient Cohort Characterisation](patient.md)
+* [Patient Cohort Characterisation](patients.md)
 * [Assisting Literature Review](covid.md)
