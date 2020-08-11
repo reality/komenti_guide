@@ -1,6 +1,6 @@
 # Patient Cohort Identification with Komenti
 
-Komenti is a shiny and multi-faceted tool, bringing together the gnoses of biomedical ontology and the delights of text mining. In this protocol document, we will describe how to use Komenti to characterise a patient cohort. 
+Komenti is a shiny and multi-faceted tool, bringing together the gnoses of biomedical ontology and the delights of text mining. In this protocol document, we will describe how to use Komenti to characterise a patient cohort, using atrial fibrillation as an example. 
 
 ## Setting up Komenti
 
@@ -8,7 +8,7 @@ Refer to the [installation guide](https://github.com/reality/komenti_guide/blob/
 
 ## Initialising Vocabulary
 
-To characterise our cohort of interest, we first need to build up a vocabulary. The vocabulary defines concepts we're interested in, and the labels that indicate them in text. In our example, let's say we're interested in finding patients with atrial fibrillation.
+To characterise our cohort of interest, we first need to build up a vocabulary. The vocabulary defines concepts we're interested in, and the labels that indicate them in text. In our example, let's say we're interested in finding patients with atrial fibrillation. You can substitute this for the condition you are interested in.
 
 First, what we need to do is identify an ontology class that describes atrial fibrillation on [AberOWL](https://aber-owl.net). Here is an example of searching AberOWL for atrial fibrillation: 
 
