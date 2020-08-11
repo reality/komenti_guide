@@ -8,7 +8,7 @@ Refer to the [installation guide](https://github.com/reality/komenti_guide/blob/
 
 ## Initialising Vocabulary
 
-To characterise our cohort of interest, we first need to build up a vocabulary. The vocabulary defines concepts we're interested in, and the labels that indicate them in text. In our example, let's say we're interested in finding patients with atrial fibrillation. You can substitute this for the condition you are interested in.
+To characterise our cohort of interest, we first need to build up a vocabulary. The vocabulary defines concepts we're interested in, and the labels that indicate them in text. In our example, let's say we're interested in finding patients with atrial fibrillation. You can substitute atrial fibrillation for the condition you are interested in extracting from the text.
 
 First, what we need to do is identify an ontology class that describes atrial fibrillation on [AberOWL](https://aber-owl.net). Here is an example of searching AberOWL for atrial fibrillation: 
 
