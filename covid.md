@@ -34,7 +34,7 @@ $ komenti query -q komenti query -q "isClinicalAspectFor some COVID-19 and 'ther
 
 The command collects different metadata associated with terms that are all clinical aspects of COVID-19, but are contained under different asserted substructures. Grouping them
 by their additional associated superclasses 'therapeutic procedure' we group all of these into one with the class description. Now, in *labels.txt* we have 6 labels for 5 different
-terms that describe therapeutic procedures for COVID-19. We can gain more labels for this by using Komenti's inter-ontology synonym expansion function:
+terms that describe therapeutic procedures for COVID-19. We can gain more labels for this by using Komenti's inter-ontology synonym expansion function (see [here](https://jbiomedsem.biomedcentral.com/articles/10.1186/s13326-021-00241-5) for more info):
 
 ```bash
 $ komenti query -q komenti query -q "isClinicalAspectFor some COVID-19 and 'therapeutic procedure'" -o COVID-19 --expand-synonyms --lemmatise > labels.txt
