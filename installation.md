@@ -6,7 +6,7 @@ You can install Komenti from the package, and then add it to your execution path
 cd ~
 wget http://lokero.xyz/komenti-0.2.0-SNAPSHOT.zip
 unzip komenti-0.2.0-SNAPSHOT.zip
-echo 'echo PATH=$PATH:~/komenti-0.2.0-SNAPSHOT/bin' >> ~/.bashrc
+echo 'export PATH=$PATH:~/komenti-0.2.0-SNAPSHOT/bin' >> ~/.bashrc
 source ~/.bashrc
 ```
 
